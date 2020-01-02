@@ -23,14 +23,15 @@ email: ronnie.ong.zg@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog about securities operational processes such as settlements and asset servicing
 baseurl: "/secops" # the subpath of your site, e.g. /blog
+author: Ronnie Ong
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+linkedin_username: ronnie-ong
+github_username:  ronnieong
 
-# Build settings
-theme: minima
+# Build settingsqwe
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.

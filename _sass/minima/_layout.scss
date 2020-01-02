@@ -3,28 +3,28 @@
  */
 .site-header {
   border-top: 0px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
-  background-color: $brand-color;
-
+  border-bottom: 0px solid $grey-color-light;
+  min-height: $spacing-unit * 1.5;
+  
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  line-height: $base-line-height * $base-font-size * 2;
+  @include relative-font-size(1.325);
+  background-color: $brand-color;
+
+  a {
+    color: $background-color;
+  }
 }
 
 .site-title {
-  color: $background-color;
-  @include relative-font-size(1.25);
-  font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
-  margin-bottom: 0;
   float: left;
+  margin-bottom: 0;  
 }
 
 .site-nav {
   float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  @include relative-font-size(1.25);
 
   .nav-trigger {
       display: none;
@@ -35,8 +35,8 @@
   }
 
   .page-link {
-    color: $grey-color;
     line-height: $base-line-height;
+    color: $grey-color-light;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -133,6 +133,7 @@
 }
 
 .footer-col-1 {
+  //float: left;
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
   width:         calc(35% - (#{$spacing-unit} / 2));
 }
@@ -143,6 +144,7 @@
 }
 
 .footer-col-3 {
+  //float: right;
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
   width:         calc(45% - (#{$spacing-unit} / 2));
 }
