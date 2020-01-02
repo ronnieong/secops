@@ -27,6 +27,7 @@ author: Ronnie Ong
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: ronnie-ong
 github_username:  ronnieong
+google_analytics: UA-155192403-1
 
 # Build settingsqwe
 plugins:
