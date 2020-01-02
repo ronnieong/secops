@@ -255,3 +255,18 @@
     }
   }
 }
+
+.post-tag {
+  display: inline-block;
+  background: $grey-color-light;
+  padding: 0 .5rem;
+  margin-left: 0.2rem;
+  border-radius: 4px;
+  color: $text-color;
+  font-size: 90%;
+  &:hover {
+    text-decoration: none;
+    background: $grey-color;
+    color: $background-color;
+  }
+}
