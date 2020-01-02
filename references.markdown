@@ -4,7 +4,8 @@ title: References
 permalink: /references/
 ---
 
-References to links and books relating to securities operations
+References to links and books relating to securities operations.  
+To be added in future.  
 
 You can find the source code for Minima at GitHub:
 [jekyll][jekyll-organization] /

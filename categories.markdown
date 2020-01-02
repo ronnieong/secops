@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Categories
-permalink: /categories/
+title: Tags
+permalink: /tags/
 ---
 
 Page with the different tags used on posts
