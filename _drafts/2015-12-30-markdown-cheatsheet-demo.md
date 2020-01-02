@@ -138,5 +138,4 @@ ___
 Footnote:
 
 [^1]: 1: Footnote number one yeah baby!
-
 [^2]: 2: A footnote you can link to - [click here!](#)

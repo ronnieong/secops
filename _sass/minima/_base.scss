@@ -78,7 +78,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit;
+  margin-left: $spacing-unit;  
 }
 
 li {
@@ -131,10 +131,11 @@ a {
  */
 blockquote {
   color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  background-color: $background-grey;
+  border-left: 4px solid $brand-color;
   padding-left: $spacing-unit / 2;
-  @include relative-font-size(1.125);
-  letter-spacing: -1px;
+  padding-top: $spacing-unit / 4;
+  padding-bottom: $spacing-unit / 4;
   font-style: italic;
 
   > :last-child {
@@ -149,10 +150,10 @@ blockquote {
  */
 pre,
 code {
-  @include relative-font-size(0.9375);
+  @include relative-font-size(1);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #e5f2e5;
+  background-color: $background-green;  
 }
 
 code {
@@ -253,3 +254,9 @@ table {
     border: 1px solid $grey-color-light;
   }
 }
+
+div.footnotes {   
+  margin-top: $spacing-unit / 4;  
+  color: $grey-color;    
+}
+
