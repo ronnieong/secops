@@ -35,6 +35,8 @@ As the seller holds the security on record date, the seller receives the entire 
 
 Accrued interest is determined at the point of trade by traders using `trading platform`. However, are the static data and accrued interest logic on these systems reliable? What implications would that have on operational staff? Stay tune for the followup post on static data and coupon claims headaches.
 
+The follow up post has been published and can be found [here]({% post_url 2020-01-07-coupon-claims-due-to-incorrect-record-dates %})
+
 ---
 
 [^1]: Probably due to operational requirements. Hopefully, the typical gap between record date and end date can be narrowed and eliminated eventually.
