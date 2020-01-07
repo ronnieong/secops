@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  How is negative accrued interest possible?
+title:  How negative accrued interest occurs
 date: 01 Jan 2020
 tags: [settlement, asset-servicing]
 ---
