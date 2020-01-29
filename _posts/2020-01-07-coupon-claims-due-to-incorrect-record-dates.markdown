@@ -2,7 +2,7 @@
 layout: post
 title:  Record dates and coupon claims
 date: 07 Jan 2020
-tags: [settlement, asset-servicing]
+tags: [bonds, settlement, asset-servicing]
 ---
 
 You can find the previous post on [negative accrued interest here]({% post_url 2020-01-01-understanding-negative-accrued-interest %})

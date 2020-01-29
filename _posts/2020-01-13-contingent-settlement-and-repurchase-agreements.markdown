@@ -2,7 +2,7 @@
 layout: post
 title:  Contingent settlement and repurchase agreements
 date: 13 Jan 2020
-tags: [settlement, repurchase-agreements, securities-lending, operational-risk]
+tags: [bonds, settlement, repurchase-agreements, securities-lending, operational-risk]
 ---
 
 Did you know that the second leg of a repurchase agreement [(Investopedia)](https://www.investopedia.com/terms/r/repurchaseagreement.asp)[^1] can settle while the first leg continues to fail? 

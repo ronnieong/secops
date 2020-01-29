@@ -2,7 +2,7 @@
 layout: post
 title:  Memorable accrued interest conventions
 date: 28 Jan 2020
-tags: [settlement]
+tags: [bonds, settlement]
 ---
 
 Accrued interest conventions are a pain. For anyone who has worked in product control or settlements, or have been tasked to improve STP rates, you probably get what I mean. 
@@ -15,7 +15,9 @@ For the uninitiated, transaction processing (TP) systems typically compute accru
 
 ## Rounding half down
 
-Why do we round 0.5 to 1 and not 0? If you draw them out on a line, 0.5 is equally close to 0 and 1. Rounding half up is the dominant convention but it is also arbitary. While uncommon, there are bond issuers out there [^1] who issue bonds which [round half down](https://en.wikipedia.org/wiki/Rounding#Round_half_down) in their accrued interest calculations.  
+Why do we round 0.5 to 1 and not 0? If you draw them out on a line, 0.5 is equally close to 0 and 1. Rounding half up is the dominant convention but it is also arbitrary. While uncommon, there are bond issuers out there [^1] who issue bonds which [round half down](https://en.wikipedia.org/wiki/Rounding#Round_half_down) in their accrued interest calculations.  
+
+![Coupon Bar Diagram]({{ site.baseurl }}/assets/images/equidistant.png)
 
 On the other hand, most TP systems do not support rounding half down. Heck, even Excel does not support this (at least Excel 2007). Naturally, this combination is a poor recipe for STP operations.
 
@@ -29,15 +31,15 @@ Given these day count conventions are a) uncommon and b) happening around leap y
 
 ## Inclusive accrued days 
 
-How many days are between 28 Jan and 29 Jan? Most would say 1 day (MS Excel would agree)   
-How many days are between the ~start~ of 28 Jan and the ~start~ of 29 Jan? Nearly all would say 1 day
-How many days are between the ~start~ of 28 Jan and the ~end~ of 29 Jan? Nearly all would say 2 days
+    How many days are between 28 Jan and 30 Jan? Most would say 2 days (MS Excel would agree)   
+    How many days are between the SOD of 28 Jan and the SOD of 30 Jan? Nearly all would say 2 days
+    How many days are between the SOD of 28 Jan and the EOD of 30 Jan? Nearly all would say 3 days
 
-My point above is that when we calculate day differences between two dates without time, we typically and implicitly assume the time is the same across the two dates. When TP systems calculate accrued days, they typically make this same assumption. In my experience, this  works for almost all markets with a few exceptions[^2]. 
+My point above is that when we calculate day differences between two dates without time being provided, we typically and implicitly assume that time is the same across the two dates. When TP systems calculate accrued days, they typically make this same assumption. Unfortunately, this does not work for all markets. I have seen markets where accrued days is calculated using the SOD of start date and EOD of settlement date[^2]. 
 
-The interesting thing about this is that it got me wondering if time has a bigger part to play in the future of financial transactions. For example, in a intraday repo, the start date and the end date. If time was not made explicit (i.e. stated), processing the transaction would be impossible. On the other hand, stating time on every single date field would be really onerous!
+This got me wondering about the implicit time assumptions we make with dates. This can become real important in certain scenarios. For example, selling a bond on its record date. Does the settlement come first or the recording come first? For that, I am grateful.
 
 ---
 
-[^1]: See type 716 of the [Bloomberg Calculation Types document](https://docplayer.net/12997386-Valid-calculation-types.html) for an example of round half down
-[^2]: See type 852 of the [Bloomberg Calculation Types document](https://docplayer.net/12997386-Valid-calculation-types.html) for an example of inclusive accrued days
+[^1]: Type 716 of [Bloomberg Calculation Types document](https://docplayer.net/12997386-Valid-calculation-types.html) is an example of round half down
+[^2]: Type 852 of [Bloomberg Calculation Types document](https://docplayer.net/12997386-Valid-calculation-types.html) is an example of inclusive accrued days

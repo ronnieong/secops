@@ -2,7 +2,7 @@
 layout: post
 title:  How negative accrued interest occurs
 date: 01 Jan 2020
-tags: [settlement, asset-servicing]
+tags: [bonds, settlement, asset-servicing]
 ---
 
 In a typical bond trade, accrued interest [(Investopedia)](https://www.investopedia.com/terms/a/accruedinterest.asp) is paid by the bond buyer to the bond seller.
